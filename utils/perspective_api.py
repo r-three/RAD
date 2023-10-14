@@ -7,7 +7,7 @@ from collections.abc import Iterator
 from threading import Lock
 import numpy as np
 
-PERSPECTIVE_API_KEY = 'AIzaSyAH-vcV5xvHTP9az6bxz1SvlQUkk1HYk-Q'     # Place your KEY here
+PERSPECTIVE_API_KEY = ""        # Place your KEY here
 QUOTA_IN_QPS = 1                # QPS>100 is optimal, see Readme.md for ways to increase API quota
 
 class RateLimiter(Iterator):

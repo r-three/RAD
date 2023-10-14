@@ -1,2 +1,3 @@
 saved_models/*
 !saved_models/.gitingore
+saved_models.zip

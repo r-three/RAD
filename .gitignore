@@ -1,0 +1,6 @@
+reward_augmented_decoding.egg-info
+outputs/*
+!outputs/.gitignore
+wandb
+__pycache__
+*/__pycache__

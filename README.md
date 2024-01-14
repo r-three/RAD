@@ -36,20 +36,22 @@ To train a toxicity reward model on `jigsaw_unintended_bias` dataset, you have t
 ## Sentiment
 To run sentiment-controlled generation experiment, run the command
 ```
+DATASET=positive
 BATCH_SIZE=4
 LANGUAGE_MODEL=gpt2-large
 TOPK=20
 BETA=50
-INVERSE=False
+INVERSE=True
 
 python eval_sentiment.py \
+    --dataset $DATASET
     --batch_size $BATCH_SIZE \
     --lm $LANGUAGE_MODEL \
     --topk $TOPK \
     --beta $BETA \
     --inverse $INVERSE
 ```
-Specify prompt type by assigning `DATASET` to one of `[negative, neutral, positive]`. You can adjust steering direction by setting `inverse` to either `True` or `False` --- for `inverse=True`, RAD steers generation toward lower reward.
+Specify prompt type by assigning `DATASET` to one of `[negative, neutral, positive]`. You can adjust steering direction by setting `inverse` to either `True` or `False` --- for `inverse=True`, RAD steers generation toward lower reward (negative sentiment in this case).
 Specify `--test True` to run only 100 examples.
 
 

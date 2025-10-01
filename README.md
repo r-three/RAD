@@ -15,12 +15,7 @@ Build the project
 pip install -e .
 ```
 
-If you want to try our toxicity and sentiment reward models, make sure you have `gdown` installed, and run
-```
-cd reward_modeling
-gdown https://storage.googleapis.com/rad_release/saved_models.zip
-unzip saved_models.zip && rm saved_models.zip
-```
+If you want to try our toxicity and sentiment reward models, download the files at [huggingface_hub](https://huggingface.co/hk/rad_rms/tree/main) and place them under `reward_modeling/saved_models`
 
 ## Train Your Own Reward Model
 Add custom dataset to `utils/get_one_dataset`, make sure it has only two attributes, "text" and "labels." Then, go to `reward_modeling/`, specify training details in `reward_modeling/configs/config_rm.yaml`. For example, to train a reward model for sentiment steering task, run the following code
